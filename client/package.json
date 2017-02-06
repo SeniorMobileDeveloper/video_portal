@@ -1,0 +1,20 @@
+{
+  "name": "video-portal-angular-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Figueroa",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-cookies": "^1.6.1",
+    "angular-md5": "^0.1.10",
+    "angular-resource": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "angulargrid": "^0.6.3"
+  },
+  "devDependencies": {}
+}
