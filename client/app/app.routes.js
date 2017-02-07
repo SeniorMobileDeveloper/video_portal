@@ -11,7 +11,7 @@ angular.module('VideoPortal')
         controller: 'AuthController',
         templateUrl: 'app/components/auth/login.view.html'
       })
-      .when('/signout', {
+      .when('/goodbye', {
         controller: 'AuthController',
         template: ' '
       })

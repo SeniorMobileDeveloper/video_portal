@@ -12,6 +12,7 @@
     "angular": "^1.6.1",
     "angular-cookies": "^1.6.1",
     "angular-md5": "^0.1.10",
+    "angular-rating": "^3.0.3",
     "angular-resource": "^1.6.1",
     "angular-route": "^1.6.1",
     "angulargrid": "^0.6.3"

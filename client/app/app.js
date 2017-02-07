@@ -4,6 +4,10 @@ angular.module('VideoPortal', [
   'ngRoute',
   'ngCookies',
   'angular-md5',
-  'angularGrid'
-]);
+  'angularGrid',
+  'angular-rating'
+])
 
+  .constant('Constants', {
+    pageSize: 10
+  });

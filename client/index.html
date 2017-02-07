@@ -13,17 +13,22 @@
 	<script src="node_modules/angular-md5/angular-md5.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="node_modules/angulargrid/angulargrid.min.js"></script>
+	<script src="node_modules/angular-rating/src/angular-rating.js"></script>
 	<!-- Code -->
 	<script src="app/app.js"></script>
 	<script src="app/app.routes.js"></script>
 	<script src="app/components/auth/auth.factory.js"></script>
 	<script src="app/components/auth/auth.controller.js"></script>
+	<script src="app/components/home/videos.factory.js"></script>
 	<script src="app/components/home/home.controller.js"></script>
-	<!--<link rel="stylesheet" type="text/css" href="app/styles/styles.css" />-->
+	<script src="app/components/video/video.component.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
 </head>
 
 <body ng-app="VideoPortal">
-	<h2>Crossover Video Portal</h2>
+	<header>
+		<h2>Crossover Video Portal</h2>
+	</header>
 	<div ng-view></div>
 </body>
 </html>
