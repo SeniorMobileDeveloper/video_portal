@@ -37,6 +37,9 @@ angular.module('VideoPortal')
               $cookies.remove('sessionId');
               $location.path('/login');
             });
+        },
+        isLoggedIn: function isLoggedIn() {
+          return $cookies.get('sessionId') ? true : false;
         }
       };
     }

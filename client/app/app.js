@@ -10,4 +10,15 @@ angular.module('VideoPortal', [
 
   .constant('Constants', {
     pageSize: 10
-  });
+  })
+  
+  .run(['$rootScope', '$location', 'AuthService',
+    function ($rootScope, $location, AuthService) {
+      /* Check if the user is logged, otherwise redirect to login page */
+      $rootScope.$on('$routeChangeStart', function (event) {
+        if (!AuthService.isLoggedIn()) {
+          $location.path('/login');
+        }
+      });
+    }
+  ]);

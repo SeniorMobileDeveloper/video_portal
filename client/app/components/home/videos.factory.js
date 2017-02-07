@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('VideoPortal')
-  .factory('VideoService', ['$http', '$cookies', 'Constants',
-    function ($http, $cookies, Constants) {
+  .factory('VideoService', ['$http', '$cookies', '$location', 'Constants',
+    function ($http, $cookies, $location, Constants) {
       var url = '/videos';
       return {
         getVideos: function getVideos(query) {
@@ -19,6 +19,12 @@ angular.module('VideoPortal')
                 throw new Error(response && response.data ? response.data.error : 'Error fetching videos');
               }
               return response.data.data;
+            })
+            .catch(function error(response) {
+              if (response.status === 401) {
+                // TODO: show error message
+                $location.path('/login');
+              }
             });
         }
       };
