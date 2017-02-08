@@ -3,7 +3,6 @@
   <video controls="controls" ng-src="{{$ctrl.video.url}}" preload="metadata">
     Your browser does not support HTML5 Video elements.
   </video>
-  <rating value="$ctrl.video.mediaRating" max="5" interactive="true"></rating>
-  <div>{{$ctrl.video.ratings}}</div>
+  <ng-rate-it ng-model="$ctrl.rating" max="5" step="1" resetable="false" ng-click="$ctrl.setRating($ctrl.rating)"></ng-rate-it>
   <div>{{$ctrl.video.description}}</div>
 </div>

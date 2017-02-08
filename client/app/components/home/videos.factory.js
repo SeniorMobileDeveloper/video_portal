@@ -48,6 +48,31 @@ angular.module('VideoPortal')
                 $location.path('/login');
               }
             });
+        },
+        rateVideo: function rateVideo(id, rating) {
+          var url = '/video/ratings';
+          var data = {
+            videoId: id,
+            rating: rating
+          };
+          var config = {
+            params: {
+              sessionId: $cookies.get('sessionId')
+            }
+          };
+          return $http.post(url, data, config)
+            .then(function success(response) {
+              if (!response || !response.data || response.data.status === 'error') {
+                throw new Error(response && response.data ? response.data.error : 'Error posting rating');
+              }
+              return response.data.data;
+            })
+            .catch(function error(response) {
+              if (response.status === 401) {
+                // TODO: show error message
+                $location.path('/login');
+              }
+            });
         }
       };
     }

@@ -5,8 +5,8 @@ angular.module('VideoPortal', [
   'ngCookies',
   'angular-md5',
   'angularGrid',
-  'angular-rating',
-  'toaster'
+  'toaster',
+  'ngRateIt'
 ])
 
   .constant('Constants', {
