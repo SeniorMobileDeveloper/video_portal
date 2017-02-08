@@ -16,7 +16,7 @@ angular.module('VideoPortal', [
     function ($rootScope, $location, AuthService) {
       /* Check if the user is logged, otherwise redirect to login page */
       $rootScope.$on('$routeChangeStart', function () {
-        if (!AuthService.isLoggedIn()) {
+        if ($location.path() !== '/login' && !AuthService.isLoggedIn()) {
           $location.path('/login');
         }
       });

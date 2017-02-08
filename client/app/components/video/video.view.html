@@ -1,5 +1,5 @@
 <div class="grid-img">
-  <h3>{{$ctrl.video.name}}</h3>
+  <h3 class="video-title" ng-click="$ctrl.goToVideoDetailPage()">{{$ctrl.video.name}}</h3>
   <video controls="controls" ng-src="{{$ctrl.video.url}}" preload="metadata">
     Your browser does not support HTML5 Video elements.
   </video>

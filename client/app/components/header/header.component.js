@@ -9,6 +9,9 @@ function HeaderController($rootScope, $location, AuthService) {
   ctrl.logout = function logout() {
     $location.path('/goodbye');
   }
+  ctrl.goHome = function goHome() {
+    $location.path('/');
+  }
 }
 
 angular.module('VideoPortal').component('videoPortalHeader', {

@@ -15,6 +15,9 @@ angular.module('VideoPortal')
         controller: 'AuthController',
         template: ' '
       })
+      .when('/video/:id', {
+        template: '<video-component></video-component>'
+      })
       .otherwise({
         redirectTo: '/login'
       });

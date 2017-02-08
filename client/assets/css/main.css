@@ -1,5 +1,9 @@
-.title {
+.header {
   text-align: center;
+}
+
+.title {
+  cursor: pointer;
 }
 
 .grid {
@@ -64,6 +68,10 @@
   }
 }
 
-video {
+.grid-video video {
   width: 100%;
+}
+
+.grid-video .video-title {
+  cursor: pointer;
 }

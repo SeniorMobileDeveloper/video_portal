@@ -2,7 +2,7 @@
   <div>
     <div class="dynamic-grid" angular-grid="videos" ag-id="gallery" ag-options="angularGridOptions" ag-infinite-scroll="loadMore()">
       <div data-ng-repeat="video in videos" class="grid">
-        <myvideo video="video"></myvideo>
+        <video-component video="video" class="grid-video"></video-component>
       </div>
       <div ng-show="loading" class="spinner">
         <div class="bounce1"></div>
