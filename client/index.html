@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<script src="node_modules/angulargrid/angulargrid.min.js"></script>
 	<script src="node_modules/angular-rating/src/angular-rating.js"></script>
+	<script src="node_modules/angularjs-toaster/toaster.min.js"></script>
+	<link rel="stylesheet" href="node_modules/angularjs-toaster/toaster.min.css">
 	<!-- Code -->
 	<script src="app/app.js"></script>
 	<script src="app/app.routes.js"></script>
@@ -29,5 +31,6 @@
 <body ng-app="VideoPortal">
 	<video-portal-header></video-portal-header>
 	<div ng-view></div>
+	<toaster-container></toaster-container>
 </body>
 </html>

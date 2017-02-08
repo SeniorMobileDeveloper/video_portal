@@ -15,7 +15,8 @@
     "angular-rating": "^3.0.3",
     "angular-resource": "^1.6.1",
     "angular-route": "^1.6.1",
-    "angulargrid": "^0.6.3"
+    "angulargrid": "^0.6.3",
+    "angularjs-toaster": "^2.1.0"
   },
   "devDependencies": {}
 }

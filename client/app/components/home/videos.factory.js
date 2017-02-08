@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('VideoPortal')
-  .factory('VideoService', ['$http', '$cookies', '$location', 'Constants',
-    function ($http, $cookies, $location, Constants) {
+  .factory('VideoService', ['$http', '$cookies', '$location', 'Constants', 'toaster',
+    function ($http, $cookies, $location, Constants, toaster) {
       return {
         getVideos: function getVideos(query) {
           var url = '/videos';

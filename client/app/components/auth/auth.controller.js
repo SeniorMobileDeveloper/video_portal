@@ -5,10 +5,7 @@ angular.module('VideoPortal').controller('AuthController', ['$scope', '$location
     $scope.user = {};
 
     $scope.doLogin = function doLogin(user) {
-      delete $scope.error;
-      AuthService.login(user).catch(function (err) {
-        $scope.error = err;
-      });
+      AuthService.login(user);
     };
 
     $scope.logout = function logout() {
