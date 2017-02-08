@@ -1,4 +1,7 @@
-<header>
+<header class="title">
   <h2>Crossover Video Portal</h2>
-  <span ng-if="$ctrl.user">Logout</span>
+  <div class="user" ng-if="$ctrl.user">
+    <span>Welcome {{$ctrl.user}} - </span>
+    <a href="" ng-click="$ctrl.logout()">Logout</a>
+  </div>
 </header>

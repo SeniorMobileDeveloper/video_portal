@@ -40,6 +40,9 @@ angular.module('VideoPortal')
         },
         isLoggedIn: function isLoggedIn() {
           return $cookies.get('sessionId') ? true : false;
+        },
+        getUsername: function getUsername() {
+          return $cookies.get('username');
         }
       };
     }
