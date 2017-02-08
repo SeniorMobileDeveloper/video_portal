@@ -22,6 +22,11 @@ angular.module('VideoPortal')
         toaster.pop('error', error);
       };
 
+      function clearCookies() {
+        $cookies.remove('username');
+        $cookies.remove('sessionId');
+      }
+
       return {
         login: function login(user) {
           var data = {
@@ -52,8 +57,7 @@ angular.module('VideoPortal')
                 throw new Error(response && response.data ? response.data.error : 'Error in logout, please try again');
               }
               toaster.pop('success', 'Logged out successfully', 'Goodbye ' + $cookies.get('username'));
-              $cookies.remove('username');
-              $cookies.remove('sessionId');
+              clearCookies();
               $location.path('/login');
             })
             .catch(handleError);
@@ -64,10 +68,7 @@ angular.module('VideoPortal')
         getUsername: function getUsername() {
           return $cookies.get('username');
         },
-        clearCookies: function clearCookies() {
-          $cookies.remove('username');
-          $cookies.remove('sessionId');
-        }
+        clearCookies: clearCookies
       };
     }
   ]);

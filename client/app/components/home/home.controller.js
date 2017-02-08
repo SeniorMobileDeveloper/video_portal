@@ -37,7 +37,7 @@ angular.module('VideoPortal').controller('HomeController', ['$scope', 'VideoServ
 
     $scope.loadMore = function loadMore() {
       if ($scope.end) return;
-      buffer.then(nextPageData => {
+      buffer.then(function emptyBuffer(nextPageData) {
         if (!nextPageData.length) {
           $scope.loading = false;
           $scope.end = true;
