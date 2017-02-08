@@ -7,12 +7,11 @@ angular.module('VideoPortal').controller('HomeController', ['$scope', 'VideoServ
     $scope.loading = true;
     $scope.end = false;
     var buffer;
-    $scope.foo = 4;
 
     $scope.angularGridOptions = {
-      gridWidth: 400,
-      gutterSize: 10,
-      infiniteScrollDistance: 800
+      gridWidth: 400, // Column width
+      gutterSize: 10, // Column separation
+      infiniteScrollDistance: 800 // Distance to continue loading data
     };
 
     /* Use a buffer to have next page ready */
@@ -23,6 +22,7 @@ angular.module('VideoPortal').controller('HomeController', ['$scope', 'VideoServ
       });
     };
 
+    /* Add videos to the view and re-load the buffer */
     var addVideos = function addVideos(videos) {
       $scope.videos = $scope.videos.concat(videos);
       $scope.loading = false;
@@ -31,8 +31,8 @@ angular.module('VideoPortal').controller('HomeController', ['$scope', 'VideoServ
     };
 
     /* Load videos on init */
-    VideoService.getVideos().then(response => {
-      addVideos(response);
+    VideoService.getVideos().then(function handleVideosResponse(videos) {
+      if (videos) addVideos(videos);
     });
 
     $scope.loadMore = function loadMore() {

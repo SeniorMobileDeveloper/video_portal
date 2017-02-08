@@ -1,8 +1,8 @@
 <div class="grid-img">
-  <h3 class="video-title" ng-click="$ctrl.goToVideoDetailPage()">{{$ctrl.video.name}}</h3>
-  <video controls="controls" ng-src="{{$ctrl.video.url}}" preload="metadata">
+  <h3 class="video-title" ng-click="$ctrl.goToVideoDetailPage()">{{::$ctrl.video.name}}</h3>
+  <video controls="controls" ng-src="{{::$ctrl.video.url}}" preload="metadata">
     Your browser does not support HTML5 Video elements.
   </video>
-  <ng-rate-it ng-model="$ctrl.rating" max="5" step="1" resetable="false" ng-click="$ctrl.setRating($ctrl.rating)"></ng-rate-it>
-  <div>{{$ctrl.video.description}}</div>
+  <ng-rate-it ng-model="$ctrl.rating" max="5" step="1" resetable="false" read-only="$ctrl.ranked" ng-click="$ctrl.setRating($ctrl.rating)"></ng-rate-it>
+  <div>{{::$ctrl.video.description}}</div>
 </div>

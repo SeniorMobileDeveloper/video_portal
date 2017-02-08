@@ -3,6 +3,11 @@
 function VideoController($location, $routeParams, VideoService) {
   var ctrl = this;
 
+  /**
+   * Calculate the average ranking
+   * @param {Array} ratings
+   * @returns {Number}
+   */
   function calculateRating(ratings) {
     var sum = ratings.reduce(function (total, value) {
       return total + value;
@@ -10,6 +15,7 @@ function VideoController($location, $routeParams, VideoService) {
     return Math.round(sum / ratings.length);
   }
 
+  /* Get the video from the api based on the route */
   if (!ctrl.video && $routeParams.id) {
     VideoService.getSingleVideo($routeParams.id)
       .then(function resolveVideo(video) {
@@ -30,11 +36,13 @@ function VideoController($location, $routeParams, VideoService) {
   }
 
   ctrl.setRating = function setRating(newRating) {
-    // TODO: handle case if already ranked
-    VideoService.rateVideo(ctrl.video._id, newRating)
-      .then(function (response) {
-        console.log(response);
-      });
+    if (!ctrl.ranked) {
+      VideoService.rateVideo(ctrl.video._id, newRating)
+        .then(function (response) {
+          ctrl.ranked = true;
+          // Not calculating the average again, as the user would probably be more interested in his own ranking.
+        });
+    }
   }
 }
 

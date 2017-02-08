@@ -11,7 +11,7 @@ angular.module('VideoPortal')
        * Display error in toast
        * @param {Object} response
        */
-      var handleError = function handleError(response) {
+      var handleError = function handleAuthError(response) {
         var error;
         if (response instanceof Error) {
           error = response;
@@ -63,6 +63,10 @@ angular.module('VideoPortal')
         },
         getUsername: function getUsername() {
           return $cookies.get('username');
+        },
+        clearCookies: function clearCookies() {
+          $cookies.remove('username');
+          $cookies.remove('sessionId');
         }
       };
     }
