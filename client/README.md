@@ -1,4 +1,4 @@
-How to run the app:
+## How to run the app:
 
 `npm install` to install dependencies.
 `npm test` to run unit tests with karma.
@@ -7,3 +7,10 @@ The app will be available at http://localhost:3000
 
 Test users are `tom`, `ali` and `harry`.
 Password is `password` for all of them.
+
+## To do's:
+
+Add bundler.
+Improve app style.
+Check and improve responsiveness.
+Refactor and improve unit tests.

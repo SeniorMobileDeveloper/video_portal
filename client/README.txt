@@ -14,8 +14,18 @@ I'd have liked to also use a bundler like gulp or webpack to avoid having so man
 
 Using a lot of existing libraries to don't re-invent the wheel.
 
-Styles are minimalist. (Not ugly).
+Styles are minimalist. Would need some more work, but I'm not doing that now as it's a time consuming task.
 
 To implement a more complete approach to rating videos, some support from the backend would be required. Now the user is only allowed to rank a video once, until refreshing the page.
+Also that API would need some tweaks (I'm also a nodejs developer)
 
 As part of the tests run, a coverage html report is generated in client/coverage
+
+The app is mostly responsive, but I didn't have the chance to test it extensively in different devices.
+
+To do's:
+
+Add bundler.
+Improve app style.
+Check and improve responsiveness.
+Refactor and improve unit tests.
