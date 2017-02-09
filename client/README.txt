@@ -17,3 +17,5 @@ Using a lot of existing libraries to don't re-invent the wheel.
 Styles are minimalist. (Not ugly).
 
 To implement a more complete approach to rating videos, some support from the backend would be required. Now the user is only allowed to rank a video once, until refreshing the page.
+
+As part of the tests run, a coverage html report is generated in client/coverage
