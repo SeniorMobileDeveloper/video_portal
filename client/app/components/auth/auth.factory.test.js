@@ -6,11 +6,9 @@ describe('AuthService', function () {
   var $cookies;
   var md5;
   beforeEach(angular.mock.module('VideoPortal'));
-  beforeEach(inject(function (_AuthService_, _md5_) {
+  beforeEach(inject(function (_AuthService_, _md5_, $injector) {
     AuthService = _AuthService_;
     md5 = _md5_;
-  }));
-  beforeEach(inject(function ($injector) {
     $httpBackend = $injector.get('$httpBackend');
     $cookies = $injector.get('$cookies');
   }));
