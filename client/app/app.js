@@ -6,7 +6,8 @@ angular.module('VideoPortal', [
   'angular-md5',
   'angularGrid',
   'toaster',
-  'ngRateIt'
+  'ngRateIt',
+  'infinite-scroll'
 ])
 
   .constant('Constants', {

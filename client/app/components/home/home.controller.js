@@ -11,7 +11,6 @@ angular.module('VideoPortal').controller('HomeController', ['$scope', 'VideoServ
     $scope.angularGridOptions = {
       gridWidth: 400, // Column width
       gutterSize: 10, // Column separation
-      infiniteScrollDistance: 800 // Distance to continue loading data
     };
 
     /* Use a buffer to have next page ready */
@@ -36,7 +35,7 @@ angular.module('VideoPortal').controller('HomeController', ['$scope', 'VideoServ
     });
 
     $scope.loadMore = function loadMore() {
-      if ($scope.end) return;
+      if ($scope.end || !buffer) return;
       buffer.then(function emptyBuffer(nextPageData) {
         if (!nextPageData.length) {
           $scope.loading = false;

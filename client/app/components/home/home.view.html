@@ -1,6 +1,6 @@
 <section class="videolist">
-  <div>
-    <div class="dynamic-grid" angular-grid="videos" ag-id="gallery" ag-options="angularGridOptions" ag-infinite-scroll="loadMore()">
+  <div infinite-scroll="loadMore()">
+    <div class="dynamic-grid" angular-grid="videos" ag-id="gallery" ag-options="angularGridOptions" >
       <div data-ng-repeat="video in videos" class="grid">
         <video-component video="video" class="grid-video"></video-component>
       </div>
