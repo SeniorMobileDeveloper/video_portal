@@ -67,18 +67,18 @@ describe('AuthService', function () {
       expect($cookies.get('username')).toBeUndefined();
     });
 
-    it('should not clear cookies on error response', function () {
+    it('should clear cookies on error response', function () {
       $cookies.put('sessionId', 'test');
       $cookies.put('username', 'test');
       $httpBackend.when('GET', '/user/logout?sessionId=test')
         .respond(401, {});
       AuthService.logout();
       $httpBackend.flush();
-      expect($cookies.get('sessionId')).toBe('test');
-      expect($cookies.get('username')).toBe('test');
+      expect($cookies.get('sessionId')).toBeUndefined();
+      expect($cookies.get('username')).toBeUndefined();
     });
 
-    it('should not clear cookies on failed logout', function () {
+    it('should clear cookies on failed logout', function () {
       $cookies.put('sessionId', 'test');
       $cookies.put('username', 'test');
       $httpBackend.when('GET', '/user/logout?sessionId=test')
@@ -88,8 +88,8 @@ describe('AuthService', function () {
         });
       AuthService.logout();
       $httpBackend.flush();
-      expect($cookies.get('sessionId')).toBe('test');
-      expect($cookies.get('username')).toBe('test');
+      expect($cookies.get('sessionId')).toBeUndefined();
+      expect($cookies.get('username')).toBeUndefined();
     });
 
   });
