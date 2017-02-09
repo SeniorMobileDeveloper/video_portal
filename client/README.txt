@@ -23,6 +23,8 @@ As part of the tests run, a coverage html report is generated in client/coverage
 
 The app is mostly responsive, but I didn't have the chance to test it extensively in different devices.
 
+Tested in Chrome and Firefox. Couldn't test it on IE.
+
 To do's:
 
 Add bundler.
