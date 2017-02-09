@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start",
+    "test": "karma start",
     "start": "cd .. && npm start"
   },
   "author": "David Figueroa",
@@ -27,6 +27,7 @@
     "jasmine-core": "^2.5.2",
     "karma": "^1.4.1",
     "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.1.0"
   }
 }
