@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start"
+    "test": "./node_modules/karma/bin/karma start",
+    "start": "cd .. && npm start"
   },
   "author": "David Figueroa",
   "license": "ISC",
