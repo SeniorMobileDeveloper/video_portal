@@ -1,7 +1,7 @@
 <section class="videolist">
   <div infinite-scroll="loadMore()">
     <div class="dynamic-grid" angular-grid="videos" ag-id="gallery" ag-options="angularGridOptions" >
-      <div data-ng-repeat="video in videos" class="grid">
+      <div data-ng-repeat="video in videos track by video._id" class="grid">
         <video-component video="video" class="grid-video"></video-component>
       </div>
       <div ng-show="loading" class="spinner">
