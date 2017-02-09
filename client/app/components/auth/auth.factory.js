@@ -20,6 +20,8 @@ angular.module('VideoPortal')
             response.data.error : 'Authentication error, please try again';
         }
         toaster.pop('error', error);
+        clearCookies();
+        $location.path('/login');
       };
 
       function clearCookies() {
